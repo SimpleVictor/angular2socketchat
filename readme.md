@@ -1,4 +1,4 @@
-## Angular2 Express Starter
+## Socket Io Chatbox with Angular 2
 
 Demo: https://express-angular2.herokuapp.com/
 
