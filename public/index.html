@@ -4,8 +4,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <base href=".">
 
-        <link rel="stylesheet" type="text/css" href="assets/css/semantic.min.css">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
 
         <!-- IE required polyfills, in this exact order -->
         <!-- Polyfill(s) for older browsers -->
@@ -13,14 +14,17 @@
         <script src="assets/js/vendor/zone.js"></script>
         <script src="assets/js/vendor/Reflect.js"></script>
         <script src="assets/js/vendor/system.js"></script>
-        <script src="assets/js/vendor/jquery.min.js"></script>
+        <!--<script src="assets/js/vendor/jquery.min.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
+
 
         <!-- 2. Configure SystemJS -->
-        <!-- Development mod
         <script src="assets/js/systemjs.config.js"></script>
         <script>
             System.import('app').catch(function(err) { console.error(err); });
-        </script> -->
+        </script>
+
     </head>
 
     <body>
@@ -30,6 +34,6 @@
             </div>
         </app>
         <!--  Production mod  -->
-        <script src="assets/js/bundle.min.js"></script>
+        <!--<script src="assets/js/bundle.min.js"></script>-->
     </body>
 </html>

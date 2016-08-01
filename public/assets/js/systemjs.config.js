@@ -9,17 +9,25 @@ var isPublic = typeof window != "undefined";
     var map = {
         'app':                        'client', // 'dist',
         '@angular':                   (isPublic)? '@angular' : 'node_modules/@angular',
+        'socket.io-client':           (isPublic)? 'socket.io-client' : 'node_modules/socket.io-client',
         '@angular/router':            (isPublic)? '@angular/router' : 'node_modules/@angular/router',
         'angular2-in-memory-web-api': (isPublic)? 'angular2-in-memory-web-api' : 'node_modules/angular2-in-memory-web-api',
         'rxjs':                       (isPublic)? 'rxjs' : 'node_modules/rxjs',
-        'ng-semantic':                (isPublic)? 'ng-semantic' : 'node_modules/ng-semantic'
+        'ng-semantic':                (isPublic)? 'ng-semantic' : 'node_modules/ng-semantic',
+        "ng2-bootstrap":               (isPublic)? 'ng2-bootstrap': 'node_modules/ng2-bootstrap',
+        "moment":                       (isPublic)? 'moment': 'node_modules/moment',
+        'ng2-bs3-modal':                (isPublic)?   'ng2-bs3-modal':  'node_modules/ng2-bs3-modal',
     };
     // packages tells the System loader how to load when no filename and/or no extension
     var packages = {
         'app':                        { main: 'main.js',  defaultExtension: 'js' },
         'rxjs':                       { defaultExtension: 'js' },
-        'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' }, 
-        'ng-semantic':                { main: 'ng-semantic', defaultExtension: 'js' }
+        'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
+        'ng-semantic':                { main: 'ng-semantic', defaultExtension: 'js' },
+        "socket.io-client":             {main: 'socket.io', defaultExtension: 'js'},
+        "ng2-bootstrap":                {main: 'ng2-bootstrap', defaultExtension: 'js'},
+        "moment":                       {main: 'moment', defaultExtension: 'js'},
+        "ng2-bs3-modal":                {main: 'ng2-bs3-modal', defaultExtension: 'js'}
     };
     var ngPackageNames = [
         'common',

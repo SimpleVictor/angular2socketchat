@@ -1,0 +1,57 @@
+<div class="container">
+    <my-navbar></my-navbar>
+    <!--<router-outlet></router-outlet>-->
+
+
+
+
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-xs-4 col-sm-4 col-md-4">
+                <h3 class="text-center" style="color: green">Online:</h3>
+                <ul>
+                    <li *ngFor="let user of users">{{user}}</li>
+                </ul>
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-8">
+                <h3 class="text-center" style="color: blue">Messages</h3>
+                <ul>
+                    <li *ngFor="let message of messages">{{message.username}}: {{message.message}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-xs-8 col-sm-8 col-md-8">
+            <form (ngSubmit)="sendMessage(bruh.value)">
+                <input type="text" class="form-control" #bruh>
+            </form>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4">
+            <button (click)="sendMessage(bruh.value)" class="btn btn-primary btn-block">Send</button>
+        </div>
+    </div>
+
+</div>
+
+<modal #modal (onClose)="onModalClose(f)" (onDismiss)="onModalClose(f)">
+
+    <modal-header>
+        <h4 class="modal-title text-center"><b>Chatbox</b></h4>
+    </modal-header>
+    <modal-body>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div class="form-group">
+            <label for="textbox">Give me a name</label>
+            <input required autofocus type="text" name="name" [(ngModel)]="name" class="form-control" id="textbox">
+        </div>
+    </form>
+    </modal-body>
+    <modal-footer>
+            <button type="submit" (click)="onSubmit(f)" class="btn btn-primary btn-block">Submit</button>
+    </modal-footer>
+</modal>
+
+
